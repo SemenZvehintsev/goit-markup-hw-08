@@ -20,6 +20,12 @@
     <header class="head">
       <div class="container head__container">
         <a class="logo" lang="en" href="./index.html">Web<span class="logo__text">Studio</span></a>
+        <button class="mobile-menu__button" type="button">
+          <svg width="40" height="40">
+            <use class="mobile-menu__icon" href="./images/icons.svg#icon-menu_burger"></use>
+            <use class="mobile-menu__icon" href="./images/icons.svg#icon-menu_close"></use>
+          </svg>
+        </button>
         <nav class="nav nav--left">
           <ul class="nav__list">
             <li class="nav__item">
@@ -121,7 +127,11 @@
             <li class="images__item">
               <img
                 class="images__img"
-                src="./images/whatwedo/img-comp.jpg"
+                srcset="
+                  ./images/whatwedo/img-comp-370.jpg 1x,
+                  ./images/whatwedo/img-comp-740.jpg 2x
+                "
+                src="./images/whatwedo/img-comp-370.jpg"
                 alt="Работа с компьютером"
                 width="370"
                 height="294"
@@ -131,7 +141,11 @@
             <li class="images__item">
               <img
                 class="images__img"
-                src="./images/whatwedo/img-phone.jpg"
+                srcset="
+                  ./images/whatwedo/img-phone-370.jpg 1x,
+                  ./images/whatwedo/img-phone-740.jpg 2x
+                "
+                src="./images/whatwedo/img-phone-370.jpg"
                 alt="Работа с телефоном"
                 width="370"
                 height="294"
@@ -141,7 +155,11 @@
             <li class="images__item">
               <img
                 class="images__img"
-                src="./images/whatwedo/img-tablet.jpg"
+                srcset="
+                  ./images/whatwedo/img-tablet-370.jpg 1x,
+                  ./images/whatwedo/img-tablet-740.jpg 2x
+                "
+                src="./images/whatwedo/img-tablet-370.jpg"
                 alt="Работа с планшетом"
                 width="370"
                 height="294"
@@ -519,5 +537,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
