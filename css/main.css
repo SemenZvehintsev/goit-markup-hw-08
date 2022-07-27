@@ -56,10 +56,12 @@ body {
   background-color: #FFFFFF;
 }
 
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: auto;
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+  }
 }
 
 .section {
