@@ -1,0 +1,16 @@
+.logo {
+    font-family: "Raleway", sans-serif;
+    color: $color-blue;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+
+.logo__text {
+    color: $color-text-black;
+    &--white {
+        color: $color-white;
+    }
+}

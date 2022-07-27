@@ -1,0 +1,27 @@
+.images {
+    display: flex;
+    gap: 30px;
+}
+
+.images__item {
+    position: relative;
+    width: 370px;
+}
+
+
+.images__description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-bg-img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
