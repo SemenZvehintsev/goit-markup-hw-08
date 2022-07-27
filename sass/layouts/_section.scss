@@ -1,0 +1,58 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--advantages {
+        padding-bottom: 0;
+    }
+
+    &--what-we-do {
+        padding-top: 50px;
+    }
+
+    &--team {
+        background-color: $color-bg;
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $color-text-black;
+        padding-bottom: 50px;
+    }
+
+    &--hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color-bg-hero;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    }
+
+    &__title {
+        color: $color-white;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        width: 696px;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title--bottom {
+        margin-bottom: 30px;
+    }
+}

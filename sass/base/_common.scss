@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+body {
+    color: $color-text-gray;
+    font-family: "Roboto", sans-serif;
+    background-color: $color-white;
+}
