@@ -2,16 +2,30 @@
     background-color: $color-bg-footer;
     padding-top: 60px;
     padding-bottom: 60px;
-
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-    }
     
-    &__contacts {
-    display: flex;
-    gap: 70px;
-    align-items: baseline;
-}
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+        &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+            @media screen and (min-width: 1200px) {
+            justify-content: space-between;
+            align-items: baseline;
+            }
+        }
+        
+        &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+            @media screen and (min-width: 1200px) {
+            gap: 70px;
+            align-items: baseline;
+        }
+        }
 }

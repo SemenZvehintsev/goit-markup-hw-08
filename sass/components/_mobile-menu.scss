@@ -1,0 +1,103 @@
+.mobile-menu {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-white;
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 48px 40px;
+
+    
+
+    &__button {
+        cursor: pointer;
+        display: flex;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background-color: transparent;
+        color: $color-text-black;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            color: $color-blue;
+        }
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+        z-index: 10;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+
+
+    &__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: $color-text-black;
+
+        &--current-page {
+            color: $color-blue;
+        }
+
+        &--tel {
+            font-size: 34px;
+            line-height: 1.18;
+            color: $color-blue;
+        }
+
+        &--email {
+            font-size: 24px;
+            line-height: 1.17;
+            color: $color-text-gray;
+        }
+    }
+
+
+
+
+    &__social {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__social-item {
+        position: relative;
+    }
+
+    &__social-item:not(:last-child):after {
+        content: '';
+        position: absolute;
+        right: -10px;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(33, 33, 33, 0.2);
+    }
+
+    &__social-link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: $color-blue;
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: scale(0.8);
+}

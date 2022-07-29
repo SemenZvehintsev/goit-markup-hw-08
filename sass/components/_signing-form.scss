@@ -1,6 +1,6 @@
 .signing {
-    margin-right: 0;
-
+/*     margin-right: 0;
+ */
     &__header {
         font-weight: 700;
         font-size: 14px;
@@ -8,18 +8,20 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: $color-white;
-        padding-bottom: 20px;
+        text-align: center;
     }
 
     &__container {
         display: flex;
+        flex-direction: column;
+        gap: 20px;
         min-height: 50px;
     }
 
     &__button {
         gap: 10px;        
-        margin-left: 12px;
-    }
+/*         margin-left: 12px;
+ */    }
 
     &__icon {
         fill: currentColor;
@@ -28,7 +30,7 @@
 
     &__email {
         height: 50px;
-        width: 358px;
+        max-width: 450px;
         color: $color-white;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
