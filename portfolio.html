@@ -18,42 +18,93 @@
 
   <body>
     <header class="head">
-      <div class="container">
-        <div class="head__container">
-          <a class="logo" lang="en" href="./index.html"
-            >Web<span class="logo__text">Studio</span></a
-          >
-          <nav class="nav nav--left">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="./index.html">Студія</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--current-page" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#contacts">Контакти</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="contact-list contact-list--left">
-            <li class="contact-list__item">
-              <a class="contact-list__link" href="mailto:info@devstudio.com">
-                <svg class="contact-list__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
+      <div class="container head__container">
+        <a class="logo" lang="en" href="./index.html">Web<span class="logo__text">Studio</span></a>
+        <button class="head__button" type="button" data-mobile-menu-open>
+          <svg class="head__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_burger"></use>
+          </svg>
+        </button>
+        <nav class="nav nav--left">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студія</a>
             </li>
-            <li class="contact-list__item">
-              <a class="contact-list__link" href="tel:+380961111111">
-                <svg class="contact-list__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
+            <li class="nav__item">
+              <a class="nav__link nav__link--current-page" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Контакти</a>
             </li>
           </ul>
+        </nav>
+        <ul class="contact-list contact-list--left">
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="mailto:info@devstudio.com">
+              <svg class="contact-list__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="tel:+380961111111">
+              <svg class="contact-list__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-menu is-hidden" data-mobile-menu>
+          <button class="mobile-menu__button" type="button" data-mobile-menu-close>
+            <svg class="mobile-menu__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu_close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link mobile-menu__link--current-page" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
+          <div>
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link mobile-menu__link--tel" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  class="mobile-menu__link mobile-menu__link--email"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__social">
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -85,13 +136,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-techno.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-techno-370.jpg 1x,
+                        ./images/portfolio/img-techno-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-techno-354.jpg 1x,
+                        ./images/portfolio/img-techno-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-techno-450.jpg 1x,
+                        ./images/portfolio/img-techno-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-techno-450.jpg"
+                      alt="Страница сайта с командой"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -107,13 +180,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-basketball.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-basketball-370.jpg 1x,
+                        ./images/portfolio/img-basketball-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-basketball-354.jpg 1x,
+                        ./images/portfolio/img-basketball-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-basketball-450.jpg 1x,
+                        ./images/portfolio/img-basketball-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-basketball-450.jpg"
+                      alt="Постер баскетбол"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magnam voluptate
                     dolorem magni laboriosam rerum ut nulla labore debitis, distinctio assumenda
@@ -129,13 +224,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-seafood.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-seafood-370.jpg 1x,
+                        ./images/portfolio/img-seafood-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-seafood-354.jpg 1x,
+                        ./images/portfolio/img-seafood-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-seafood-450.jpg 1x,
+                        ./images/portfolio/img-seafood-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-seafood-450.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sit similique.
                     Velit totam possimus reprehenderit exercitationem ipsum rerum quas, provident
@@ -151,13 +268,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-headphones.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-headphones-370.jpg 1x,
+                        ./images/portfolio/img-headphones-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-headphones-354.jpg 1x,
+                        ./images/portfolio/img-headphones-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-headphones-450.jpg 1x,
+                        ./images/portfolio/img-headphones-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-headphones-450.jpg"
+                      alt="Наушники"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quidem quo error
                     natus explicabo necessitatibus ipsa voluptatum commodi cum debitis nihil est
@@ -173,13 +312,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-boxes.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-boxes-370.jpg 1x,
+                        ./images/portfolio/img-boxes-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-boxes-354.jpg 1x,
+                        ./images/portfolio/img-boxes-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-boxes-450.jpg 1x,
+                        ./images/portfolio/img-boxes-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-boxes-450.jpg"
+                      alt="Коробки"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi debitis eligendi
                     rem, autem tempora aliquam maxime nam quis! Ipsam dolore minus architecto dicta
@@ -195,13 +356,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-monitor.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-monitor-370.jpg 1x,
+                        ./images/portfolio/img-monitor-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-monitor-354.jpg 1x,
+                        ./images/portfolio/img-monitor-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-monitor-450.jpg 1x,
+                        ./images/portfolio/img-monitor-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-monitor-450.jpg"
+                      alt="Монитор"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas eligendi,
                     tempore possimus voluptatum dignissimos sed amet numquam doloribus porro
@@ -218,13 +401,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-limited.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-limited-370.jpg 1x,
+                        ./images/portfolio/img-limited-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-limited-354.jpg 1x,
+                        ./images/portfolio/img-limited-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-limited-450.jpg 1x,
+                        ./images/portfolio/img-limited-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-limited-450.jpg"
+                      alt="Журнал"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsa accusamus
                     voluptatum deleniti sed quis natus incidunt, aperiam error aut et maxime,
@@ -240,13 +445,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-lab.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-lab-370.jpg 1x,
+                        ./images/portfolio/img-lab-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-lab-354.jpg 1x,
+                        ./images/portfolio/img-lab-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-lab-450.jpg 1x,
+                        ./images/portfolio/img-lab-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-lab-450.jpg"
+                      alt="Ярлык"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia
                     culpa odit, mollitia illum quisquam repellat repellendus dicta dolorum sit
@@ -263,13 +490,35 @@
             <li class="work-list__item">
               <a class="work-list__link" href="">
                 <div class="work-list__background">
-                  <img
-                    class="work-list__img"
-                    src="./images/portfolio/img-laptop.jpg"
-                    alt="Страница сайта с командой"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img-laptop-370.jpg 1x,
+                        ./images/portfolio/img-laptop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-laptop-354.jpg 1x,
+                        ./images/portfolio/img-laptop-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/img-laptop-450.jpg 1x,
+                        ./images/portfolio/img-laptop-900.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/img-laptop-450.jpg"
+                      alt="Лэптоп"
+                    />
+                  </picture>
+
                   <p class="work-list__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aspernatur
                     exercitationem amet suscipit aperiam blanditiis. Quidem, nisi corrupti, suscipit
@@ -292,7 +541,7 @@
       <h2 class="visually-hidden">Футер</h2>
       <div class="container footer__container">
         <div class="footer__contacts">
-          <div>
+          <div class="footer__nav">
             <a class="logo" lang="en" href="./index.html"
               >Web<span class="logo__text logo__text--white">Studio</span></a
             >
@@ -372,5 +621,7 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

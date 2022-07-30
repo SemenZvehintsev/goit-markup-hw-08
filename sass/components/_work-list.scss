@@ -2,9 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 
     &__item {
-        width: 370px;
+        max-width: 450px;
+        @media screen and (min-width: 768px) {
+            max-width: 354px;
+        }
+                
+        @media screen and (min-width: 1200px) {
+            max-width: 370px;
+        }
     }
 
     &__link {
