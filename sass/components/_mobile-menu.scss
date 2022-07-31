@@ -48,6 +48,9 @@
         letter-spacing: 0.02em;
         color: $color-text-black;
 
+        
+        &:hover,
+        &:focus,
         &--current-page {
             color: $color-blue;
         }

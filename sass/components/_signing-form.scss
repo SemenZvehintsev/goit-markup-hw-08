@@ -1,6 +1,13 @@
 .signing {
-/*     margin-right: 0;
- */ 
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 0;
+        max-width: 100%;                
+    }
+
     &__header {
         font-weight: 700;
         font-size: 14px;
@@ -9,22 +16,28 @@
         text-transform: uppercase;
         color: $color-white;
         text-align: center;
+        margin-bottom: 20px;
+        
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
     }
 
     &__container {
-        margin: 0 auto;
+    @media screen and (min-width: 1200px) {
         display: flex;
-        max-width: 450px;
-        flex-direction: column;
-        gap: 20px;
-        min-height: 50px;
-        align-items: center;       
+        align-items: center;    }   
     }
 
     &__button {
+        margin-top: 20px;
         gap: 10px;        
-/*         margin-left: 12px;
- */    }
+        
+        @media screen and (min-width: 1200px) {
+            margin-top: 0;
+            margin-left: 12px;
+        }
+    }
 
     &__icon {
         fill: currentColor;
@@ -43,6 +56,10 @@
         letter-spacing: 0.03em;
         transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
+        
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+        }
     }
 
     &__email:focus,

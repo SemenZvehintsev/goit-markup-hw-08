@@ -1,4 +1,9 @@
 .join {
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+    
     &__header {
         font-weight: 700;
         font-size: 14px;
