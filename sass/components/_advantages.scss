@@ -1,10 +1,7 @@
 .list {
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;        
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 
     &__item {
             
@@ -13,15 +10,7 @@
         }
             
         @media screen and (min-width: 1200px) {
-            width: 270px;
-        }                
-    }
-    
-    &__item:not(:last-child) {
-        margin-bottom: 30px;
-        @media screen and (min-width: 768px) {
-            margin-bottom: 0;
-        }
+            width: calc((100% - 90px) / 4);        }                
     }
 
     &__icon {
@@ -42,6 +31,10 @@
         text-transform: uppercase;
         color: $color-text-black;
         margin-bottom: 10px;
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
     }
 
     &__description {
