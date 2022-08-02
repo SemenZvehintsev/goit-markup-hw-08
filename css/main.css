@@ -1071,11 +1071,25 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
   }
 }
 .filter-list__item {
   margin-right: 8px;
   margin-bottom: 15px;
+}
+.filter-list__item:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .filter-list__item {
+    margin-bottom: 0;
+  }
 }
 .filter-list__button {
   font-family: inherit;
@@ -1123,7 +1137,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .work-list__item {
-    width: calc((100% - 90px) / 4);
+    width: calc((100% - 60px) / 3);
   }
 }
 .work-list__link {
